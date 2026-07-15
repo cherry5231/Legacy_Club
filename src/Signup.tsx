@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./signup.css";
+import "./Signup.css";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
