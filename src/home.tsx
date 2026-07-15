@@ -2,8 +2,21 @@
 import './App.css'
 import { Link } from "react-router-dom";
 import TypingText from "./TypingText";
+import { useState, useEffect } from "react";
 
 function App() {
+   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+useEffect(() => {
+  const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+  setIsLoggedIn(loggedIn);
+}, []);
+
+const handleLogout = () => {
+  localStorage.removeItem("isLoggedIn");
+  localStorage.removeItem("userName");
+  setIsLoggedIn(false);
+};
    return (
         <>
             <div className="navigation">
@@ -17,7 +30,15 @@ function App() {
 </Link>
                 </div>
 <div className="signupnav">
-    <Link to="/Signup" className="signupnav-link">Sign up</Link>
+    {isLoggedIn ? (
+        <button onClick={handleLogout} className="signupnav-link">
+            Log out
+        </button>
+    ) : (
+        <Link to="/signup" className="signupnav-link">
+            Sign up
+        </Link>
+    )}
 </div>
             </div>
 
