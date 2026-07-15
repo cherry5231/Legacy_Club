@@ -83,7 +83,7 @@ function Pricing() {
               ))}
             </ul>
 
-            <Link to="/signup" className="join-btn">
+            <Link to="/Signup" className="join-btn">
               Join Now
             </Link>
           </div>
@@ -96,7 +96,7 @@ function Pricing() {
           Don't wait for motivation. Build discipline and create your own
           legacy — one rep, one round, one day at a time.
         </p>
-        <Link to="/signup" className="join-btn cta-btn">
+        <Link to="/Signup" className="join-btn cta-btn">
           Become a Member
         </Link>
       </div>
