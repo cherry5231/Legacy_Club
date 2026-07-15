@@ -27,11 +27,13 @@ function Login() {
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.error || "Something went wrong");
-        return;
-      }
+  setError(data.error || "Something went wrong");
+  return;
+}
 
-      navigate("/");
+localStorage.setItem("isLoggedIn", "true");
+localStorage.setItem("userName", data.name || "");
+navigate("/");
     } catch {
       setError("Could not reach the server");
     }
