@@ -1,7 +1,5 @@
-declare module './TypingText' {
-  interface TypingTextProps {
-    text: string;
-  }
-  const TypingText: React.FC<TypingTextProps>;
-  export default TypingText;
+declare module '*.jsx' {
+  import { FC } from 'react';
+  const Component: FC<any>;
+  export default Component;
 }
