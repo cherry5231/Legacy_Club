@@ -17,7 +17,7 @@ function App() {
 </Link>
                 </div>
 <div className="signupnav">
-    <Link to="/signup" className="signupnav-link">Sign up</Link>
+    <Link to="/Signup" className="signupnav-link">Sign up</Link>
 </div>
             </div>
 
