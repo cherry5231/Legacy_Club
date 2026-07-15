@@ -38,12 +38,14 @@ function Signup() {
 
       const data = await res.json();
 
-      if (!res.ok) {
-        setError(data.error || "Something went wrong");
-        return;
-      }
+     if (!res.ok) {
+  setError(data.error || "Something went wrong");
+  return;
+}
 
-      navigate("/");
+localStorage.setItem("isLoggedIn", "true");
+localStorage.setItem("userName", form.name || "");
+navigate("/");
     } catch {
       setError("Could not reach the server");
     }
