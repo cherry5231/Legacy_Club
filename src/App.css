@@ -312,7 +312,11 @@ body {
   transform: translateY(-3px);
   border-color: #b5754a;
 }
-
+.signupnav button.signupnav-link {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 720px) {
   .navigation {
